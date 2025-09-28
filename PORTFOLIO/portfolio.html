@@ -1,0 +1,121 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Nishant — Portfolio</title>
+
+  <!-- Font Awesome for icons -->
+  <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css"
+        integrity="sha512-DxV+EoADOkOygM4IR9yXP8Sb2qwgidEmeqAEmDKIOfPRQZOWbXCzLC6vjbZyy0vPisbH2SyW27+ddLVCN+OMzQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <!-- IMPORTANT: load the CSS filename exactly as below -->
+  <link rel="stylesheet" href="portfolio.css" />
+</head>
+<body>
+
+  <!-- hidden checkbox toggles sidebar -->
+  <input type="checkbox" id="check" />
+
+  <!-- top-left open button (label tied to the checkbox) -->
+  <label for="check" class="btn_1" aria-label="open menu">
+    <i class="fa-solid fa-bars"></i>
+  </label>
+
+  <!-- theme toggle -->
+  <button id="theme" aria-label="toggle theme"><i class="fa-solid fa-moon"></i></button>
+
+  <!-- sidebar -->
+  <aside class="sidebar" role="navigation" aria-label="sidebar menu">
+    <div class="logo"><h2>MENU</h2></div>
+
+    <!-- close button inside sidebar -->
+    <label for="check" class="btn_2" aria-label="close menu"><i class="fa-solid fa-xmark"></i></label>
+
+    <nav class="nav">
+      <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+
+    <div class="social_media">
+      <a href="https://linkedin.com/in/nishant" target="_blank" rel="noopener"><i class="fa-brands fa-linkedin"></i></a>
+      <a href="https://github.com/nishant" target="_blank" rel="noopener"><i class="fa-brands fa-github"></i></a>
+      <a href="#" aria-hidden="true"><i class="fa-brands fa-youtube"></i></a>
+      <a href="#" aria-hidden="true"><i class="fa-brands fa-threads"></i></a>
+    </div>
+  </aside>
+
+  <!-- main content -->
+  <main>
+    <section id="home" class="card">
+      <div class="center">
+        <img src="pic.png" alt="Profile photo" class="profile" />
+        <h1>Nishant <span class="muted">👋</span></h1>
+        <p class="muted">Aspiring Web & Software Developer | B.Tech CSE</p>
+      </div>
+    </section>
+
+    <section id="about" class="card">
+      <h2>About Me</h2>
+      <p>I build simple and useful apps — comfortable with C, C++, Python, JavaScript, HTML & CSS. Working on Machine Learning basics and DSA.</p>
+    </section>
+
+    <section id="skills" class="card">
+      <h2>Skills</h2>
+      <ul>
+        <li><strong>Languages:</strong> C, C++, Python, JavaScript</li>
+        <li><strong>Web:</strong> HTML, CSS</li>
+        <li><strong>Tools:</strong> Git, GitHub, VS Code</li>
+        <li><strong>Learning:</strong> Machine Learning, DSA</li>
+      </ul>
+    </section>
+
+    <section id="projects" class="card">
+      <h2>Projects</h2>
+      <div class="project-container">
+        <article class="project-card">
+          <h3>Library Management System</h3>
+          <p>Built using Web (HTML/CSS/JS/PHP) + Python/C versions — issue/return flow.</p>
+        </article>
+        <article class="project-card">
+          <h3>Digital Clock</h3>
+          <p>Real-time clock with date & seconds in Python.</p>
+        </article>
+        <article class="project-card">
+          <h3>Simple Calculator</h3>
+          <p>Basic arithmetic — implemented in C and also as a web app.</p>
+        </article>
+      </div>
+    </section>
+
+    <section id="contact" class="card">
+      <h2>Contact</h2>
+      <p>📧 <a href="mailto:Vishugujjar6666@gmail.com">Vishugujjar6666@gmail.com</a></p>
+      <p>📞 95281 85838</p>
+      <p>📄 <a href="Nishant_Resume_Final.pdf" target="_blank">Download Resume</a></p>
+    </section>
+  </main>
+
+  <footer>
+    <p>© 2025 Nishant</p>
+  </footer>
+
+  <script>
+    // simple theme toggle (class-based)
+    const themeBtn = document.getElementById('theme');
+    themeBtn.addEventListener('click', () => {
+      document.body.classList.toggle('dark-mode');
+      themeBtn.innerHTML = document.body.classList.contains('dark-mode')
+        ? '<i class=\"fa-solid fa-sun\"></i>'
+        : '<i class=\"fa-solid fa-moon\"></i>';
+    });
+  </script>
+</body>
+</html>
